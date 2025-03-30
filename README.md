@@ -33,6 +33,13 @@ This notebook predicts quarterly spending using a hybrid ensemble model:
   - Time-series adjustment: ARIMA forecasts integrated with machine learning predictions for enhanced accuracy.
 - **Output**: A CSV file (`q4_spending_forecast.csv`) with predicted spending values for Q4.
 
+### 'Autoencoder_Team101'
+This notebook utilizes the autoencoder model to detect the anomalies
+- **Anomaly Detection**:
+- Use an autoencoder-based model to detect the anomalies in the dataset
+- **Evalutation**:
+- Use Euclidean Distance and a scatter plot to evaluate the results that the model predicted. The Euclidean distance shows how close each data point is to each others.
+
 ---
 
 ## Installation
