@@ -7,6 +7,8 @@
 This repository contains Jupyter notebooks:
 1. **`feature_engineering.ipynb`**: Prepares enriched account-level features for financial data analysis, including fraud detection and forecasting.
 2. **`forecast.ipynb`**: Implements a hybrid forecasting model combining machine learning (XGBoost) and time-series techniques (ARIMA) to predict quarterly spending.
+3.  **Autoencoder_Team101.ipynb**: Implement the autoencoder model to detect the anomalies in the dataset using the risk features.
+4.  **Clusster.ipynb**: Implement the credit line increase prediction model using the feature engineered dataset using both cluster model and regression model.
 
 ---
 
@@ -33,7 +35,7 @@ This notebook predicts quarterly spending using a hybrid ensemble model:
   - Time-series adjustment: ARIMA forecasts integrated with machine learning predictions for enhanced accuracy.
 - **Output**: A CSV file (`q4_spending_forecast.csv`) with predicted spending values for Q4.
 
-### 'Autoencoder_Team101'
+### 'Autoencoder_Team101.ipynb'
 This notebook utilizes the autoencoder model to detect the anomalies
 - **Anomaly Detection**:
 - Use an autoencoder-based model to detect the anomalies in the dataset
