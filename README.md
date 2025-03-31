@@ -86,7 +86,7 @@ This project focuses on preparing enriched financial features and applying vario
 
 ## 📊 Results Summary
 
-### 📌 Clustering & Segmentation
+### Clustering & Segmentation
 
 - PCA Visualization and K-Means Clustering used to segment customers based on risk and spending scores.
 - Segmentation resulted in four clear customer groups:
@@ -97,7 +97,7 @@ This project focuses on preparing enriched financial features and applying vario
 - Plots included in results show distinct cluster separations and insights into customer profiles.
 
 
-### 🔢 Regression Performance
+### Regression Performance
 
 | Model Type           | MAE     | RMSE    | R² Score | MAPE   |
 |----------------------|---------|---------|----------|--------|
