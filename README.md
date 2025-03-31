@@ -105,8 +105,9 @@ This project focuses on preparing enriched financial features and applying vario
 | All Numeric Features | 103.63  | 549.79  | 0.9919   | 6.09%  |
 
 
-- **Anomaly Detection**: Effectively flagged outlier accounts with high reconstruction error.
-- **Clustering**: Segmented users into meaningful groups such as *High Risk, Low Spending*, enabling personalized strategies.
+### Anomaly Detection: Effectively flagged outlier accounts with high reconstruction error.
+
+### Clustering: Segmented users into meaningful groups such as *High Risk, Low Spending*, enabling personalized strategies.
 
 ---
 
