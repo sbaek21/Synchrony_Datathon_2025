@@ -35,7 +35,7 @@ This project focuses on preparing enriched financial features and applying vario
 
 ## 📂 Notebooks Description
 
-### 🔧 `feature_engineering.ipynb`
+### `feature_engineering.ipynb`
 - **Goal**: Prepare clean and enriched features from multiple raw financial datasets.
 - **Data Sources**:  
   - `account_dim`, `transaction_fact`, `statement_fact`, `fraud_claim_case`, `wrld_stor_tran_fact`
@@ -63,7 +63,7 @@ This project focuses on preparing enriched financial features and applying vario
 
 ---
 
-### 🔍 `Cluster.ipynb`
+### `Cluster.ipynb`
 - **Goal**: Segment customers using clustering and PCA, and predict credit line adjustments using regression.
 
 #### Part 1: Customer Segmentation (Classification Model)
