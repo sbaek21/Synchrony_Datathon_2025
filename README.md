@@ -1,51 +1,118 @@
-# Synchrony_Datathon_2025
-Link to video: https://youtu.be/K3RXS6xk-6U
-# Financial Data Feature Engineering and Forecasting
 
-## Overview
-
-This repository contains Jupyter notebooks:
-1. **`feature_engineering.ipynb`**: Prepares enriched account-level features for financial data analysis, including fraud detection and forecasting.
-2. **`forecast.ipynb`**: Implements a hybrid forecasting model combining machine learning (XGBoost) and time-series techniques (ARIMA) to predict quarterly spending.
-3.  **Autoencoder_Team101.ipynb**: Implement the autoencoder model to detect the anomalies in the dataset using the risk features.
-4.  **Clusster.ipynb**: Implement the credit line increase prediction model using the feature engineered dataset using both cluster model and regression model.
+## **Team 101**  
+📽️ _Link to presentation video: **[https://youtu.be/K3RXS6xk-6U]**_
 
 ---
 
-## Notebooks Description
+## 📌 Overview
 
-### 1. `feature_engineering.ipynb`
-This notebook processes raw financial data from multiple sources to create enriched features for downstream analysis:
-- **Data Sources**:
-  - Account information, transactions, statements, fraud claims, and world transactions.
-- **Key Features Created**:
-  - Velocity and acceleration metrics for quarterly spending.
-  - Fraud risk scores based on delinquency trends, utilization rates, and credit grades.
-  - Cash flow metrics such as cash-to-debt ratio and buffer ratios.
-  - Customer lifecycle segmentation (e.g., New, Established, Mature accounts).
-- **Output**: A CSV file (`enriched_account_information.csv`) containing all processed features.
+This project focuses on preparing enriched financial features and applying various machine learning techniques for forecasting, anomaly detection, and credit limit analysis. It includes four major components:
 
-### 2. `forecast.ipynb`
-This notebook predicts quarterly spending using a hybrid ensemble model:
-- **Feature Engineering**:
-  - Extracts rolling averages, lagged spending values, and growth rates from historical data.
-- **Modeling Approach**:
-  - Base model: XGBoost regressor trained on all accounts.
-  - Segment models: Separate XGBoost models trained on account segments (e.g., high-volatility or high-utilization accounts).
-  - Time-series adjustment: ARIMA forecasts integrated with machine learning predictions for enhanced accuracy.
-- **Output**: A CSV file (`q4_spending_forecast.csv`) with predicted spending values for Q4.
+1. **`feature_engineering.ipynb`** – Generate account-level financial features.
+2. **`forecast.ipynb`** – Predict quarterly spending using XGBoost and ARIMA.
+3. **`Autoencoder_Team101.ipynb`** – Detect anomalies using autoencoders.
+4. **`Clusster.ipynb`** –  Perform customer segmentation (clustering + PCA) and build a regression model to predict credit line adjustments.
 
-### 'Autoencoder_Team101.ipynb'
-This notebook utilizes the autoencoder model to detect the anomalies
-- **Anomaly Detection**:
-- Use an autoencoder-based model to detect the anomalies in the dataset
-- **Evalutation**:
-- Use Euclidean Distance and a scatter plot to evaluate the results that the model predicted. The Euclidean distance shows how close each data point is to each others.
+---
+## ⚙️ Setup & Installation
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/Jeybird248/Synchrony_Datathon_2025.git
+   ```
+
+2. **Install dependencies**:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. **Start Jupyter**:
+   ```bash
+   jupyter notebook
+   ```
 
 ---
 
-## Installation
+## 📂 Notebooks Description
 
-To run the notebooks, install the required Python packages:
+### 🔧 `feature_engineering.ipynb`
+- **Goal**: Prepare clean and enriched features from multiple raw financial datasets.
+- **Data Sources**:  
+  - `account_dim`, `transaction_fact`, `statement_fact`, `fraud_claim_case`, `wrld_stor_tran_fact`
+- **Output**: `enriched_account_information.csv`
 
-pip install -r requirements.txt
+---
+
+### `forecast.ipynb`
+- **Goal**: Forecast Q4 spending using hybrid models.
+- **Models Used**:
+  - `XGBoost` for regression  
+  - `ARIMA` for time-series forecasting  
+  - Combined for better accuracy in volatile segments
+- **Output**: `q4_spending_forecast.csv`
+
+---
+
+### `Autoencoder_Team101.ipynb`
+- **Goal**: Detect account-level anomalies using risk-related features.
+- **Approach**:
+  - Build a deep autoencoder model
+  - Evaluate reconstruction loss (Euclidean distance)
+- **Output**:
+  - Anomaly scores with scatter plot visualization
+
+---
+
+### 🔍 `Clusster.ipynb`
+- **Goal**: Segment customers using clustering and PCA, and predict credit line adjustments using regression.
+
+#### Part 1: Customer Segmentation (Classification Model)
+- PCA used to reduce dimensionality of numeric risk and spending features
+- K-Means clustering applied to identify distinct customer segments
+- Customers categorized into four key groups:
+  - High Spending, High Risk
+  - High Spending, Low Risk
+  - Low Spending, High Risk
+  - Low Spending, Low Risk
+
+#### Part 2: Credit Line Adjustment Prediction (Regression Model)
+- Linear regression trained using both selected and full numeric features
+- Performance evaluated with metrics such as R², MAE, RMSE, and MAPE
+- Helped identify feature importance and risk-adjusted recommendations
+
+---
+
+
+
+## 📊 Results Summary
+
+### 📌 Clustering & Segmentation
+
+- PCA Visualization and K-Means Clustering used to segment customers based on risk and spending scores.
+- Segmentation resulted in four clear customer groups:
+  - High Spending, High Risk  
+  - High Spending, Low Risk  
+  - Low Spending, High Risk  
+  - Low Spending, Low Risk  
+- Plots included in results show distinct cluster separations and insights into customer profiles.
+
+
+### 🔢 Regression Performance
+
+| Model Type           | MAE     | RMSE    | R² Score | MAPE   |
+|----------------------|---------|---------|----------|--------|
+| Selected Features    | 192.98  | 421.20  | 0.9618   | 20.78% |
+| All Numeric Features | 103.63  | 549.79  | 0.9919   | 6.09%  |
+
+
+- **Anomaly Detection**: Effectively flagged outlier accounts with high reconstruction error.
+- **Clustering**: Segmented users into meaningful groups such as *High Risk, Low Spending*, enabling personalized strategies.
+
+---
+
+## ✅ Key Takeaways
+- Enriched features significantly improved prediction accuracy.
+- Regression models are effective for estimating credit limits using spending and risk metrics.
+- PCA and clustering provided interpretable customer segments useful for strategic targeting.
+- Autoencoder helped identify anomalies that rule-based systems may miss.
+- Feature selection vs. full feature modeling offered a balance between accuracy and interpretability.
