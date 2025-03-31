@@ -11,7 +11,7 @@ This project focuses on preparing enriched financial features and applying vario
 1. **`feature_engineering.ipynb`** – Generate account-level financial features.
 2. **`forecast.ipynb`** – Predict quarterly spending using XGBoost and ARIMA.
 3. **`Autoencoder_Team101.ipynb`** – Detect anomalies using autoencoders.
-4. **`Clusster.ipynb`** –  Perform customer segmentation (clustering + PCA) and build a regression model to predict credit line adjustments.
+4. **`Cluster.ipynb`** –  Perform customer segmentation (clustering + PCA) and build a regression model to predict credit line adjustments.
 
 ---
 ## ⚙️ Setup & Installation
@@ -63,7 +63,7 @@ This project focuses on preparing enriched financial features and applying vario
 
 ---
 
-### 🔍 `Clusster.ipynb`
+### 🔍 `Cluster.ipynb`
 - **Goal**: Segment customers using clustering and PCA, and predict credit line adjustments using regression.
 
 #### Part 1: Customer Segmentation (Classification Model)
