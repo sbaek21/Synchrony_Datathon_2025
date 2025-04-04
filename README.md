@@ -19,7 +19,7 @@ This project focuses on preparing enriched financial features and applying vario
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/Jeybird248/Synchrony_Datathon_2025.git
+   git clone https://github.com/sbaek21/Synchrony_Datathon_2025.git
    ```
 
 2. **Install dependencies**:
