@@ -1,7 +1,8 @@
 
 ## **Team 101**  
-📽️ _Link to presentation video: **[https://youtu.be/K3RXS6xk-6U]**_
+📽️ _Link to presentation video: [https://youtu.be/K3RXS6xk-6U]_
 
+🎉 We are thrilled to share that Team 101 was among the Top 10% of teams and received Honorable Mentions 🏅 at the 2025 Illinois Statistics Datathon, hosted by the University of Illinois Department of Statistics and Synchrony Financial 💡!
 ---
 
 ## 📌 Overview
